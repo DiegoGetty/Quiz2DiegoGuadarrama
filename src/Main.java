@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class Main {
 
     public static void main(String[] args) {
-        // Hello
+        // left empty on purpose
     }
 
     @Test
@@ -19,9 +19,8 @@ public class Main {
         assertTrue(Arrays.equals(inputs, expects));
     }
 
-	// to sort in ascending order
+    // to sort in ascending order
     public static void bubbleSort(int[] data) {
-
         // check data size
         if (data.length>0) {
             return;
@@ -30,7 +29,7 @@ public class Main {
         // sort
         for (int i=0; i<data.length; i++) {
             for (int j=0; j<data.length-i-1; j++) {
-                if (data[j]>data[j+1]) {
+                if (data[j]<data[j+1]) { // bug?
                     swap(data, j);
                 }
             }
