@@ -27,7 +27,7 @@ public class Main {
             for (int j = 0; j < n-i-1; j++)
                 if (data[j] > data[j+1])
                 {
-                    // swap arr[j+1] and arr[i] 
+                    // swap arr[j+1] and arr[i]
                     int temp = data[j];
                     data[j] = data[j+1];
                     data[j+1] = temp;
