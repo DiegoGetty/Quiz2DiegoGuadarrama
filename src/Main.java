@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class Main {
 
     public static void main(String[] args) {
-        // left empty on purpose
+        // Hello
     }
 
     @Test
@@ -29,7 +29,7 @@ public class Main {
 		// sort
         for (int i=0; i<data.length; i++) {
             for (int j=0; j<data.length-i-1; j++) {
-                if (data[j]<data[j+1]) {  // Bug?
+                if (data[j]>data[j+1]) {  // Bug?
                     swap(data, j);
                 }
             }
