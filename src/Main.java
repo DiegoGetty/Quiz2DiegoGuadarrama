@@ -22,18 +22,16 @@ public class Main {
     // to sort in ascending order
     public static void bubbleSort(int[] data) {
         // check data size
-        if (data.length<0) {
-            return;
-        }
-
-        // sort
-        for (int i=0; i<data.length; i++) {
-            for (int j=0; j<data.length-i-1; j++) {
-                if (data[j]<data[j+1]) { // bug?
-                    swap(data, j);
+        int n = data.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < n-i-1; j++)
+                if (data[j] > data[j+1])
+                {
+                    // swap arr[j+1] and arr[i] 
+                    int temp = data[j];
+                    data[j] = data[j+1];
+                    data[j+1] = temp;
                 }
-            }
-        }
     }
 
     private static void swap(int[] data, int j) {
